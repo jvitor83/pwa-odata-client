@@ -1,0 +1,78 @@
+<ion-split-pane #splitPaneLeftMenu [when]="whenSplitPaneShow(768)">
+  <ion-menu id="leftMenu" side="start" type="overlay">
+
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Pages</ion-title>
+        <ion-item slot="end" invisible-to="mobile" (click)="fixMenu()">
+          <span [@leftMenuState]="leftMenuState" class="glyphicon glyphicon-pushpin toolbar-title-md" aria-hidden="true"></span>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ng-content select="[seed-menu-items]"></ng-content>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+
+
+  <ion-split-pane main [when]="whenRightSplitPaneShow(768)">
+    <!-- when="(min-width: 1440px)" -->
+    <ion-content main #content>
+
+      <seed-header [showRightMenuButton]="showRightMenuButton" [infoAtRightMenu]="infoAtRightMenu">
+      </seed-header>
+
+      <div id="appcontent">
+
+        <!-- Breadcrumb -->
+        <breadcrumbs></breadcrumbs>
+
+        <div padding>
+
+
+
+          <ng-content>
+          </ng-content>
+
+        </div>
+      </div>
+
+    </ion-content>
+
+
+    <ion-menu *ngIf="infoAtRightMenu == true" [disabled]="infoAtRightMenu != true" id="rightMenu" type="overlay" side="end">
+
+      <ion-header>
+        <ion-toolbar color="primary">
+            <ion-item slot="start" invisible-to="mobile" (click)="fixRightMenu()">
+              <span [@rightMenuState]="rightMenuState" class="glyphicon glyphicon-pushpin toolbar-title-md" aria-hidden="true"></span>
+            </ion-item>
+
+          <ion-title>Info/Settings</ion-title>
+
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <seed-userinfo></seed-userinfo>
+          </ion-item>
+          <ion-item>
+            <seed-systeminfo></seed-systeminfo>
+          </ion-item>
+          <ion-item>
+            <seed-enterpriseinfo></seed-enterpriseinfo>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+
+    </ion-menu>
+
+  </ion-split-pane>
+</ion-split-pane>

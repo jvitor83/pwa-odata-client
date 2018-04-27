@@ -1,0 +1,166 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./theme/theme";
+
+// body{
+//   background-color: #eaeaea;
+// }
+
+// ion-menu ion-content {
+//   background-color: transparent !important;
+// }
+
+.scroll {
+  overflow-y: auto !important;
+}
+
+.toolbar-title {
+  overflow: inherit;
+}
+
+// .bar-button-menutoggle{
+//   display: inline-block;
+// }
+
+.label{
+  color: black;
+  font-size: 16px;
+}
+
+/*
+@media all and (max-width: 768px) {
+   [mobile-hidden] {
+        display: none;
+    }
+}
+*/
+
+/*
+@media all and (max-width: 768px) {
+   [visible="desktop"] {
+        display: none;
+    }
+}
+
+@media all and (min-width: 767px) {
+   [visible="mobile"] {
+        display: none;
+    }
+}
+*/
+
+@media (max-width: 767px) {
+  [invisible-to="mobile"] {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  [invisible-to="tablet"] {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  [invisible-to="laptop"] {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  [invisible-to="desktop"] {
+    display: none !important;
+  }
+}
+
+
+.split-pane-visible > .split-pane-side {//[side=left]
+    max-width: 250px !important;
+    min-width: 250px !important;
+    order: 0 !important; // temporary fix???
+}
+
+.split-pane-visible>.split-pane-side[side=end] {
+  border-left: 1px solid rgba(var(--ion-item-md-border-color-rgb,var(--ion-item-border-color-rgb,0,0,0)),.13);
+  border-right: 0px;
+}
+.split-pane-visible>.split-pane-side[side=start] {
+  border-left: 0px;
+  border-right: 1px solid rgba(var(--ion-item-md-border-color-rgb,var(--ion-item-border-color-rgb,0,0,0)),.13);
+}
+
+
+ion-title {
+  display: inline-block;
+}
+
+/* Fix for Safari on Tablets/Desktops */
+_::-webkit-full-page-media, _:future, :root {
+  ion-split-pane > ion-split-pane > ion-content > .scroll-content {
+    position: relative !important;
+  }
+}
+/* Fix for IPad Air 2 */
+.split-pane-visible>.split-pane-visible {
+  display: -webkit-flex !important;
+}
+
+
+[layout-tabs] {
+  position: absolute;
+  display: inline-block;
+  left: inherit;
+  max-width: inherit !important;
+  background-color: $theme-color !important;
+}
+[layout-tabs] > .tabbar {
+  width: auto !important;
+}
+[layout-tabs] .tabbar > a {
+  min-width: 125px !important;
+  background-color: $background-color;
+}
+[layout-tab]  .content {
+  background-color: transparent !important;
+}
+.tabbar{
+  height: 100% !important;
+}
+
+[end] {
+  display: flex !important;
+}
+
+// More space considering Right Button Menu
+.bar-button-menutoggle-md {
+  margin: 0px !important;
+}
+
+.toolbar-content {
+   display: contents;
+}
+
+.toolbar-content-md > [padding] {
+  padding: 0px !important;
+}
+
+.toolbar-title-md {
+  padding: 0px !important;
+}
+//
+
+// ion-menu {
+//   z-index: 999999 !important;
+// }
+
+// seed-menu-item ion-label ion-icon {
+//     float: left;
+// }
+// seed-menu-item :hover {
+//     cursor: pointer;
+// }
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}

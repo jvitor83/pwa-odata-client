@@ -1,0 +1,9 @@
+{
+  "name": "angular-pwa-seed",
+  "type": "angular",
+  "watchPatterns": [],
+  "integrations": {
+    "cordova": {}
+  },
+  "pro_id": "angular-pwa-seed"
+}
