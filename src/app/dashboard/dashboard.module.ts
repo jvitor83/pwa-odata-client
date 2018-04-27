@@ -6,6 +6,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
+import {TableModule} from 'primeng/table';
+
 
 // import { IonicModule } from '@ionic/angular';
 
@@ -13,6 +15,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     imports: [
         CommonModule,
         DashboardRoutingModule,
+        TableModule,
         // IonicModule,
         // IonicModule.foforRoot(DashboardComponent),
         // IonicPageModule.forChild(DashboardComponent),

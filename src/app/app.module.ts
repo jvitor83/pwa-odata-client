@@ -18,9 +18,6 @@ import { ChartsModule } from 'ng2-charts';
 
 import { environment } from '../environments/environment';
 
-import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
-import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 
 // Routing Module
 import { AppRoutingModule } from './app.routing';
@@ -34,11 +31,11 @@ import { InitOidcAuthenticationService, OidcAuthModule } from './shared/auth/aut
 import { AuthModule } from './shared/auth/auth.module';
 import { YoloAuthModule } from './shared/auth/authentication-yolo/yolo-module';
 import { YOLO_AUTHENTICATION_SERVICE } from './shared/auth/authentication-yolo/yolo-authentication-service.token';
-import { FirebaseAuthModule } from './shared/auth/authentication-firebase/firebase-module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { Network } from '@ionic-native/network/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -88,7 +85,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
     //   )
     // ),
 
-
+    TableModule,
     LayoutModule,
 
     ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
